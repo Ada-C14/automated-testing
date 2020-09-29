@@ -16,7 +16,18 @@ class Card
   end
 
   def to_s
-    return "#{value} of #{suit.to_s}"
+    if @value == 1
+      string_value = "Ace"
+    elsif @value == 11
+      string_value = "Jack"
+    elsif @value == 12
+      string_value = "Queen"
+    elsif @value == 13
+      string_value = "King"
+    else
+      string_value = @value
+    end
+    return "#{string_value} of #{suit.to_s}"
   end
 
 end
